@@ -1,45 +1,52 @@
 /**
  * backend http basic service.
  */
-import { Api, IQuery, Param } from './url';
+import fetch from 'node-fetch';
+import { IApiConfig } from '../config';
+import { Api, IQuery, Param, Url } from './url';
 
 export interface IBody {
     [key: string]: any;
 }
 
-export type Method = 'get' | 'post' | 'patch' | 'put' | 'delete';
+export interface IHeader {
+    [key: string]: any;
+}
+
+export type Method = 'GET' | 'POST' | 'PUT' | 'DELETE';
 
 export interface IHttpOptions {
-    api: Api;
-    params: Param[];
-    query: IQuery;
+    api: IApiConfig;
+    params?: Param[];
+    query?: IQuery;
+    body?: IBody;
+    header?: IHeader;
 }
 
 export class Http {
-    public static instance: Http;
-
-    public static list<T>(api: Api, params: Param[], query: IQuery) {
-
+    public static list<T>(options: IHttpOptions) {
+        return Http.buildMethod<T[]>('GET', options);
     }
 
-    public static detail<T>(api: Api, params: Param[], query: IQuery) {
-
+    public static detail<T>(options: IHttpOptions) {
+        return Http.buildMethod<T>('GET', options);
     }
 
-    public static create<T>(api: Api, params: Param[], body: IBody) {
-
+    public static create<T>(options: IHttpOptions) {
+        return Http.buildMethod<T>('POST', options);
     }
 
-    public static update<T>(api: Api, params: Param[], body: IBody) {
-
+    public static update<T>(options: IHttpOptions) {
+        return Http.buildMethod<T>('PUT', options);
     }
 
-    public static delete<T>(api: Api, params: Param[]) {
-
+    public static delete<T>(options: IHttpOptions) {
+        return Http.buildMethod<T>('DELETE', options);
     }
 
     public static buildMethod<T>(method: Method, options: IHttpOptions) {
-        this.instance = this.instance || new Http();
-        return;
+        const { api, params, query, body, header } = options;
+
+        return fetch(Url.gen(api, params, query));
     }
 }

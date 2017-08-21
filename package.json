@@ -1,9 +1,11 @@
 {
     "name": "graphql-start-kit",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "The kit for building Graphql middle layer to wrap backend apis.",
     "main": "index.js",
-    "scripts": {},
+    "scripts": {
+        "dev": "NODE_ENV=dev ./node_modules/.bin/nodemon ./src/app.ts"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/honpery/graphql-start-kit.git"
@@ -16,11 +18,23 @@
     },
     "homepage": "https://github.com/honpery/graphql-start-kit#readme",
     "devDependencies": {
+        "@types/kcors": "^2.2.1",
+        "@types/koa": "^2.0.39",
+        "@types/koa-bodyparser": "^3.0.23",
+        "@types/koa-logger": "^2.0.2",
+        "@types/node-fetch": "^1.6.7",
+        "nodemon": "^1.11.0",
+        "ts-node": "^3.3.0",
         "tslint": "^5.6.0",
         "typescript": "^2.4.2"
     },
     "dependencies": {
         "graphql": "^0.10.5",
-        "koa": "^2.3.0"
+        "happy-graphql": "^0.0.1",
+        "kcors": "^2.2.1",
+        "koa": "^2.3.0",
+        "koa-bodyparser": "^4.2.0",
+        "koa-logger": "^3.0.1",
+        "node-fetch": "next"
     }
 }

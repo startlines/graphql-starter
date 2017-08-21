@@ -5,7 +5,10 @@
     ],
     "jsRules": {},
     "rules": {
-        "quotemark": ["single", "jsx-double"]
+        "quotemark": ["single", "jsx-double"],
+        "object-literal-sort-keys": false,
+        "variable-name": ["allow-leading-underscore"],
+        "arrow-parens": false
     },
     "rulesDirectory": []
 }

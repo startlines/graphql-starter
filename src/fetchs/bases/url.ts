@@ -1,3 +1,7 @@
+/**
+ * url types and handler.
+ */
+import { IApiConfig } from '../config';
 
 export type Api = string;
 
@@ -8,7 +12,7 @@ export interface IQuery {
 }
 
 export class Url {
-    public static gen() {
+    public static gen(api: IApiConfig, params: Param[], query: IQuery) {
         return '';
     }
 }

@@ -1,5 +1,5 @@
 {
-    "name": "graphql-start-kit",
+    "name": "graphql-start",
     "version": "0.0.2",
     "description": "The kit for building Graphql middle layer to wrap backend apis.",
     "main": "index.js",
@@ -8,15 +8,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/honpery/graphql-start-kit.git"
+        "url": "git+https://github.com/honpery/graphql-start.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/honpery/graphql-start-kit/issues"
+        "url": "https://github.com/honpery/graphql-start/issues"
     },
-    "homepage": "https://github.com/honpery/graphql-start-kit#readme",
+    "homepage": "https://github.com/honpery/graphql-start#readme",
     "devDependencies": {
         "@types/kcors": "^2.2.1",
         "@types/koa": "^2.0.39",

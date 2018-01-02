@@ -1,2 +1,3 @@
-# graphql-start-kit
-The kit for building Graphql middle layer to wrap backend apis.
+# graphql-starter [![Build Status](https://travis-ci.org/startlines/graphql-starter.svg?branch=master)](https://travis-ci.org/startlines/graphql-starter)
+
+> The kit for using graphql.

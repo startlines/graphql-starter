@@ -1,40 +1,44 @@
 {
-    "name": "graphql-start",
+    "name": "graphql-starter",
     "version": "0.0.2",
-    "description": "The kit for building Graphql middle layer to wrap backend apis.",
+    "description": "The kit for using graphql.",
     "main": "index.js",
+    "private": true,
     "scripts": {
-        "dev": "NODE_ENV=dev ./node_modules/.bin/nodemon ./src/app.ts"
+        "dev": "NODE_ENV=dev ./node_modules/.bin/nodemon ./src/app.ts",
+        "ncu": "ncu -au && yarn",
+        "test": "mocha -r ts-node/register test/**/*.ts"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/honpery/graphql-start.git"
+        "url": "git+https://github.com/startlines/graphql-starter.git"
     },
     "keywords": [],
-    "author": "",
+    "author": "honpery <honpery@gmail.com>",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/honpery/graphql-start/issues"
+        "url": "https://github.com/startlines/graphql-starter/issues"
     },
-    "homepage": "https://github.com/honpery/graphql-start#readme",
+    "homepage": "https://github.com/startlines/graphql-starter#readme",
     "devDependencies": {
-        "@types/kcors": "^2.2.1",
-        "@types/koa": "^2.0.39",
-        "@types/koa-bodyparser": "^3.0.23",
-        "@types/koa-logger": "^2.0.2",
-        "@types/node-fetch": "^1.6.7",
-        "nodemon": "^1.11.0",
-        "ts-node": "^3.3.0",
-        "tslint": "^5.6.0",
-        "typescript": "^2.4.2"
+        "@types/chai": "^4.0.10",
+        "@types/kcors": "^2.2.2",
+        "@types/koa": "^2.0.43",
+        "@types/koa-bodyparser": "^3.0.26",
+        "@types/koa-logger": "^3.1.0",
+        "@types/mocha": "^2.2.45",
+        "chai": "^4.1.2",
+        "mocha": "^4.1.0",
+        "nodemon": "^1.14.7",
+        "ts-node": "^4.1.0",
+        "tslint": "^5.8.0",
+        "typescript": "^2.6.2"
     },
     "dependencies": {
-        "graphql": "^0.10.5",
-        "happy-graphql": "^0.0.1",
+        "graphql": "^0.12.3",
         "kcors": "^2.2.1",
-        "koa": "^2.3.0",
+        "koa": "^2.4.1",
         "koa-bodyparser": "^4.2.0",
-        "koa-logger": "^3.0.1",
-        "node-fetch": "next"
+        "koa-logger": "^3.1.0"
     }
 }
